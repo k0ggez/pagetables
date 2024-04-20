@@ -1,0 +1,15 @@
+    Customizing config.h:
+Change LEVELS to the desired number of levels of your page tables. Larger values will slow down the program.
+Change POBITS to the desired number of page offset bits on each address. Increasing this will increase the
+size of the pages. Making POBITS too large will eventually restrict the number of layers you can possibly have.
+
+    USE CASE:
+A use case of this program is for the educational purpose of demonstrating how page table allocation and translating
+works. One can demonstrate the relation of the size of the offset to the size of a page table using this program.
+
+    ACKNOWLEDGEMENTS:
+Jacob from lab at 2pm helped me figure out that alignment should be the same as size in posix_memalign
+Jacob from lab at 2pm suggested to use memset to zero out page tables
+
+    LIMITATIONS:
+there is no way to make different pages have different sizes.
